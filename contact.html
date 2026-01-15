@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <title>聯絡我們｜陳鎮宇｜電動工具品牌代理</title>
+  <meta name="description" content="合作洽詢表單：姓名、公司、需求、電話、Email。電話 0937-439-654 / czhenyu516@gmail.com" />
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="回到首頁">
+        <div class="brand-mark" aria-hidden="true">ZY</div>
+        <div class="brand-text">
+          <div class="brand-name">陳鎮宇（Z.Y. Chen）</div>
+          <div class="brand-sub">品牌代理 / Brand &amp; Market Manager</div>
+        </div>
+      </a>
+      <nav class="nav" aria-label="主選單">
+        <a href="index.html" data-page="index.html">首頁</a>
+        <a href="brands.html" data-page="brands.html">代理品牌</a>
+        <a href="process.html" data-page="process.html">合作流程</a>
+        <a href="contact.html" data-page="contact.html" class="btn btn-small">聯絡我們</a>
+      </nav>
+    </div>
+  </header>
+
+
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <h1>聯絡我們<br><span class="muted">合作洽詢 / 產品諮詢</span></h1>
+        <p class="lead">填寫表單或直接來電/寄信，我會盡快回覆。</p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-label">電話</div>
+            <div class="contact-value"><a href="tel:+886937439654">0937-439-654</a></div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-label">Email</div>
+            <div class="contact-value"><a href="mailto:czhenyu516@gmail.com">czhenyu516@gmail.com</a></div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px">
+          <a class="btn" href="mailto:czhenyu516@gmail.com?subject=%E5%90%88%E4%BD%9C%E6%B4%BD%E8%A9%A2%EF%BC%9A%E9%9B%BB%E5%8B%95%E5%B7%A5%E5%85%B7%E5%93%81%E7%89%8C%E4%BB%A3%E7%90%86">用 Email 聯絡</a>
+          <a class="btn btn-ghost" href="tel:+886937439654">直接撥打</a>
+        </div>
+      </div>
+
+      <div class="hero-banner">
+        <img src="assets/hero-banner.svg" alt="聯絡頁 Banner 示意圖">
+        <div class="banner-meta">表單送出可用 Netlify Forms（最簡單），或改用 Formspree。</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2>洽詢表單</h2>
+      <p>表單欄位：姓名、公司、需求、電話、Email。已加入防垃圾機器人欄位。</p>
+
+      <!-- Netlify Forms: 上傳到 Netlify 後可直接寄到你的信箱（在 Netlify 後台設定通知） -->
+      <form name="cooperation" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="cooperation" />
+        <p style="display:none">
+          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+
+        <div class="input-row">
+          <label>姓名
+            <input name="name" autocomplete="name" required placeholder="例如：王小明" />
+          </label>
+          <label>公司 / 單位
+            <input name="company" required placeholder="例如：XX 五金行 / XX 工程行" />
+          </label>
+        </div>
+
+        <label>需求內容
+          <textarea name="message" required placeholder="例如：想詢問某品牌工具的供貨/報價/合作方式…"></textarea>
+        </label>
+
+        <div class="input-row">
+          <label>電話
+            <input name="phone" inputmode="tel" placeholder="例如：09xx-xxx-xxx" />
+          </label>
+          <label>Email
+            <input name="email" type="email" autocomplete="email" required placeholder="例如：abc@example.com" />
+          </label>
+        </div>
+
+        <label>洽詢類型
+          <select name="type" required>
+            <option value="" disabled selected>請選擇</option>
+            <option>經銷 / 批發合作</option>
+            <option>工程端供應</option>
+            <option>產品諮詢</option>
+            <option>其他</option>
+          </select>
+        </label>
+
+        <div>
+          <button class="btn" type="submit">送出洽詢</button>
+          <span style="margin-left:10px"></span>
+          <a class="btn btn-ghost" href="brands.html">先看品牌</a>
+        </div>
+
+        <small>提醒：若你用 GitHub Pages，上面這個 Netlify 表單不會自動寄信；要寄到信箱請用 Netlify 上線，或改成 Formspree。</small>
+      </form>
+
+      <div class="note">
+        <strong>要讓表單「寄到你的信箱」：</strong><br>
+        1) 最簡單：把網站丟到 Netlify，並在 Netlify 的 <em>Forms → Notifications</em> 設定通知到 <strong>czhenyu516@gmail.com</strong>。<br>
+        2) 若堅持 GitHub Pages：把 form action 改成 Formspree 的 endpoint（你註冊後會拿到），同樣能寄到信箱。
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> 陳鎮宇｜品牌代理</div>
+      <div class="footer-links">
+        <a href="index.html">首頁</a>
+        <a href="brands.html">代理品牌</a>
+        <a href="contact.html">聯絡</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

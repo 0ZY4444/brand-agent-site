@@ -1,0 +1,270 @@
+/* Brand Agent Site (Multi-page) */
+:root{
+  --bg:#0b1220;
+  --panel:#0f1a2e;
+  --card:#111f38;
+  --text:#e8edf7;
+  --muted:#a9b4c8;
+  --line:rgba(255,255,255,.10);
+  --accent:#6aa6ff;
+  --accent2:#7cf0d8;
+  --shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:"Noto Sans TC", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  background:linear-gradient(180deg, var(--bg), #070b14 70%);
+  color:var(--text);
+  line-height:1.7;
+}
+
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.92;text-decoration:underline}
+img{max-width:100%;display:block}
+
+.container{width:min(1120px, 92%); margin-inline:auto}
+.hr{height:1px;background:var(--line);margin:22px 0}
+
+.site-header{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter: blur(10px);
+  background: rgba(11,18,32,.78);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 0;
+  gap:16px;
+}
+.brand{display:flex; align-items:center; gap:12px}
+.brand-mark{
+  width:44px; height:44px; border-radius:12px;
+  display:grid; place-items:center;
+  background: radial-gradient(120% 120% at 10% 10%, var(--accent2), var(--accent));
+  color:#071022; font-weight:900; letter-spacing:.5px;
+}
+.brand-name{font-weight:800}
+.brand-sub{color:var(--muted); font-size:14px}
+
+.nav{display:flex; gap:14px; align-items:center; flex-wrap:wrap}
+.nav a{color:var(--muted); font-size:14px}
+.nav a.active{color:var(--text); font-weight:700}
+.nav a.btn{color:#071022}
+.nav a:hover{color:var(--text)}
+
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:10px 14px;
+  border-radius:999px;
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
+  border:1px solid transparent;
+  font-weight:800;
+  text-decoration:none !important;
+}
+.btn:hover{opacity:.95}
+.btn-ghost{
+  background: transparent;
+  border:1px solid var(--line);
+  color:var(--text) !important;
+}
+.btn-small{padding:8px 12px; font-size:14px}
+
+.hero{
+  padding:46px 0 34px;
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{
+  display:grid;
+  grid-template-columns: 1.25fr .95fr;
+  gap:22px;
+  align-items:stretch;
+}
+.hero h1{
+  margin:0 0 10px;
+  font-size: clamp(30px, 4vw, 44px);
+  letter-spacing:.2px;
+  line-height:1.15;
+}
+.muted{color:var(--muted); font-weight:600}
+.lead{color:var(--muted); font-size:18px; margin:0 0 16px}
+.hero-cta{display:flex; gap:10px; flex-wrap:wrap}
+.hero-banner{
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+  background: rgba(255,255,255,.03);
+  box-shadow: var(--shadow);
+}
+.hero-banner .banner-meta{
+  padding:14px 14px 12px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:13px;
+}
+.chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+.chip{
+  border:1px solid var(--line);
+  color:var(--muted);
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:13px;
+  background: rgba(255,255,255,.04);
+}
+
+.section{padding:44px 0}
+.section-alt{
+  background: rgba(255,255,255,.03);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+h2{margin:0 0 14px; font-size:26px}
+p{margin:0 0 12px; color:var(--muted)}
+strong{color:var(--text)}
+
+.grid-3{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:14px;
+  margin-top:16px;
+}
+.grid-2{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:14px;
+  margin-top:16px;
+}
+.card{
+  background: rgba(255,255,255,.04);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:16px;
+}
+.card h3{margin:0 0 8px; font-size:18px}
+.card p{margin:0; color:var(--muted)}
+
+.logo-row{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-top:12px;
+}
+.logo-pill{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  padding:10px 12px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.03);
+}
+.logo-pill img{width:28px;height:28px}
+.logo-pill span{color:var(--text); font-weight:800; font-size:14px}
+
+.badge{
+  display:inline-flex;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  font-size:12px;
+  color:var(--text);
+  background: rgba(255,255,255,.05);
+  margin-bottom:10px;
+  font-weight:800;
+}
+
+.note{
+  margin-top:16px;
+  padding:14px 16px;
+  border-radius:14px;
+  border:1px dashed var(--line);
+  color:var(--muted);
+  background: rgba(255,255,255,.02);
+}
+
+.timeline{
+  display:grid;
+  gap:12px;
+  margin-top:16px;
+}
+.step{
+  display:grid;
+  grid-template-columns: 44px 1fr;
+  gap:12px;
+  align-items:start;
+  padding:14px 14px 12px;
+  border-radius:16px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.03);
+}
+.step .num{
+  width:44px;height:44px;border-radius:14px;
+  display:grid;place-items:center;
+  background: radial-gradient(120% 120% at 10% 10%, var(--accent2), var(--accent));
+  color:#071022;font-weight:900;
+}
+.step h3{margin:0 0 4px}
+.step p{margin:0;color:var(--muted)}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:12px;
+  margin-top:16px;
+}
+.contact-card{
+  background: rgba(255,255,255,.04);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:14px 14px 12px;
+}
+.contact-label{color:var(--muted); font-size:13px}
+.contact-value{font-weight:800; margin-top:4px}
+
+form{
+  margin-top:18px;
+  display:grid;
+  gap:12px;
+}
+.input-row{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:12px;
+}
+label{display:grid; gap:6px; color:var(--muted); font-size:14px}
+input, textarea, select{
+  padding:12px 12px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.03);
+  color:var(--text);
+  outline:none;
+}
+textarea{min-height:140px; resize:vertical}
+small{color:var(--muted)}
+
+.site-footer{
+  padding:22px 0;
+  color:var(--muted);
+}
+.footer-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  border-top:1px solid var(--line);
+  padding-top:16px;
+}
+.footer-links{display:flex; gap:12px}
+.footer-links a{color:var(--muted); font-size:14px}
+
+@media (max-width: 920px){
+  .hero-inner{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .input-row{grid-template-columns:1fr}
+  .nav{gap:10px}
+}
